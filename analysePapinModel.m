@@ -664,5 +664,5 @@ end
 %
 function res = get_model()
 
-load ../model/iRC1080.mat
+load ./model/iRC1080.mat
 res = iRC1080;
