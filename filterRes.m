@@ -18,12 +18,12 @@
 %   res <cell> - csv ready cell array with all modules that show at least
 %   5% drop in bm or TAG production
 %
-% Bsp.:
-%   bm = find(schritt4_lb001_035.thres1.c.moduleKO.WTbm(:,2) / ...
-%       schritt4_lb001_035.thres1.c.WTbm(2) < 0.95);
+% e.g.:
+%   bm = find(step4_lb001_035.thres1.c.moduleKO.WTbm(:,2) / ...
+%       step4_lb001_035.thres1.c.WTbm(2) < 0.95);
 %   tag = -"-
 
-function res = filterRes(model, preResults, schritt, filterType, fileName, step5_bmLB, modulePath)
+function res = filterRes(model, preResults, step, filterType, fileName, step5_bmLB, modulePath)
 global cr
 cr = model;
 
@@ -33,7 +33,7 @@ cr = model;
 
 % step4vis   = visAnalysis(step4_lb001_035, 1);
 
-switch schritt
+switch step
     case 4  % KO simulation
         visAnRes  = visAnalysis(preResults, 1);
         threshold = fieldnames(preResults);
