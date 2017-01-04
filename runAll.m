@@ -1,8 +1,9 @@
 % runAll
 %
-% script that executes runAnalysis and all different sorts of different 
-% experiments via analysePapinModel
-% things
+% header script 
+% executes runAnalysis and all different types of simulations 
+% based on iRC1080 
+%
 %
 
 %
@@ -13,8 +14,7 @@
 modulePath = './data/ALGdL_modules.mat'; % change to whatever your path is
 
 % KO sims of single KO and module KO
-% step4 = runAnalysis(4, [0.1 0.3 0.5]);
-step4mod = runAnalysis(4, [0.1 0.3 0.5], [], modulePath, iRC1080mod);
+step4 = runAnalysis(4, [0.1 0.3 0.5]);
 
 % KD sims of single KD and module KD
 % step5 = runAnalysis(5, [0.1 0.3 0.5], [0.0625 0.125 0.25 0.5]);
